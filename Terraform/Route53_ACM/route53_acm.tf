@@ -1,9 +1,9 @@
 resource "aws_route53_zone" "dns" {
-    name = "simha.in.net"
+    name = "nambir.live"
 }
 
 resource "aws_acm_certificate" "ssl" {
-    domain_name = "simha.in.net"
+    domain_name = "nambir.live"
     validation_method = "DNS"
     depends_on = [ aws_route53_zone.dns]
 }
